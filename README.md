@@ -57,3 +57,46 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+```
+campMenu
+├─ .angular
+├─ .editorconfig
+├─ angular.json
+├─ package-lock.json
+├─ package.json
+├─ public
+│  └─ favicon.ico
+├─ README.md
+├─ src
+│  ├─ app
+│  │  ├─ app.component.html
+│  │  ├─ app.component.scss
+│  │  ├─ app.component.spec.ts
+│  │  ├─ app.component.ts
+│  │  ├─ app.config.ts
+│  │  ├─ app.routes.ts
+│  │  ├─ floating-buttons
+│  │  │  ├─ floating-buttons.component.html
+│  │  │  ├─ floating-buttons.component.scss
+│  │  │  ├─ floating-buttons.component.spec.ts
+│  │  │  └─ floating-buttons.component.ts
+│  │  ├─ header
+│  │  │  ├─ header.component.html
+│  │  │  ├─ header.component.scss
+│  │  │  ├─ header.component.spec.ts
+│  │  │  └─ header.component.ts
+│  │  └─ menu
+│  │     ├─ menu.component.html
+│  │     ├─ menu.component.scss
+│  │     ├─ menu.component.spec.ts
+│  │     └─ menu.component.ts
+│  ├─ assets
+│  ├─ index.html
+│  ├─ main.ts
+│  └─ styles.scss
+├─ tsconfig.app.json
+├─ tsconfig.json
+└─ tsconfig.spec.json
+
+```

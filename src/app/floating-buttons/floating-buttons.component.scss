@@ -1,0 +1,82 @@
+/* Ensure the floating buttons are centered and responsive */
+.floating-buttons {
+  position: fixed;
+  bottom: 30px; /* Distance from the bottom */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  /* margin: 0 auto; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 1000; /* Ensure the buttons are above other content */
+}
+
+/* Style for the buttons */
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 14px 30px;
+  border-radius: 50px;
+  border: none;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+
+  .btn-text {
+    display: inline-block;
+    font-size: 1rem;
+    text-transform: uppercase;
+  }
+
+  /* Hover and focus effects */
+  &:hover {
+    background-color: #0056b3;
+    transform: scale(1.1); /* Scale up button on hover */
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+  }
+
+  /* Smooth animations for button interaction */
+  &:active {
+    transform: scale(0.98); /* Slightly shrink on click */
+  }
+}
+
+/* Specific button color adjustments */
+.menu-btn {
+  background-color: #007bff; /* Blue for Menu */
+}
+
+.places-btn {
+  background-color: #28a745; /* Green for Nearby Places */
+}
+
+@media (max-width: 768px) {
+  .floating-buttons {
+    gap: 15px; /* Adjust button spacing for smaller screens */
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 12px 24px; /* Smaller padding for mobile */
+  }
+}
+
+@media (max-width: 576px) {
+  .floating-buttons {
+    bottom: 20px; /* Adjust position for smaller devices */
+  }
+}

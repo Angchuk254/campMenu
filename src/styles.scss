@@ -1,1 +1,25 @@
-/* You can add global styles to this file, and also import other style files */
+/* Ensure the content has enough padding at the bottom to avoid overlapping */
+
+/* Style for the floating buttons */
+.floating-buttons {
+  position: fixed;
+  bottom: 20px; /* Distance from the bottom */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 15px;
+
+  .btn {
+    background-color: #007bff; /* Primary button color */
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 50px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #0056b3; /* Darker shade on hover */
+    }
+  }
+}

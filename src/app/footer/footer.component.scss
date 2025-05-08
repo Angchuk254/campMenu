@@ -1,0 +1,116 @@
+/* Style for the footer */
+.footer {
+  background-color: #333; /* Dark background for the footer */
+  color: #fff; /* White text */
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  /* Footer content styling */
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 20px;
+
+    .footer-left,
+    .footer-middle,
+    .footer-right {
+      flex: 1;
+      padding: 10px;
+      margin-right: 20px;
+    }
+
+    /* Footer Left Section */
+    .footer-left {
+      h3 {
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+      }
+      .footer-description {
+        font-size: 1rem;
+        color: #ccc;
+      }
+    }
+
+    /* Footer Middle Section */
+    .footer-middle {
+      h4 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+          font-size: 1rem;
+          color: #ccc;
+          margin-bottom: 10px;
+
+          strong {
+            color: #fff;
+          }
+        }
+      }
+    }
+
+    /* Footer Right Section */
+    .footer-right {
+      h4 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+      }
+
+      .social-links {
+        display: flex;
+        gap: 15px;
+
+        .social-icon {
+          color: #fff;
+          text-decoration: none;
+          font-size: 1rem;
+          padding: 10px;
+          border-radius: 5px;
+          transition: background-color 0.3s;
+
+          &.facebook {
+            background-color: #3b5998;
+          }
+          &.instagram {
+            background-color: #e4405f;
+          }
+          &.twitter {
+            background-color: #1da1f2;
+          }
+
+          &:hover {
+            opacity: 0.7;
+          }
+        }
+      }
+    }
+  }
+
+  /* Footer Bottom Section */
+  .footer-bottom {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #aaa;
+    width: 100%;
+    border-top: 1px solid #444;
+    padding-top: 20px;
+  }
+
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}

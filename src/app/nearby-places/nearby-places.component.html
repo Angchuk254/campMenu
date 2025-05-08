@@ -1,0 +1,90 @@
+<div class="nearby-places">
+    <h2>Nearby Places to Explore</h2>
+
+    <!-- Carousel -->
+    <div class="carousel-container">
+        <div class="carousel-images">
+            <img *ngFor="let place of places; let i = index" [src]="place.image" alt="{{ place.name }}"
+                [class.active]="currentIndex === i" />
+        </div>
+        <div class="carousel-controls">
+            <button (click)="prevImage()">‹</button>
+            <button (click)="nextImage()">›</button>
+        </div>
+    </div>
+
+    <!-- Info Section -->
+    <div class="places-description">
+        <h3>{{ places[currentIndex].name }}</h3>
+        <p>{{ places[currentIndex].description }}</p>
+    </div>
+
+    <div class="detailed-info">
+        <h4>About {{ places[currentIndex].name }}</h4>
+        <p>{{ places[currentIndex].detailedDescription }}</p>
+    </div>
+
+    <!-- Map Section -->
+    <!-- <div class="map-section">
+        <h4>Location on Map</h4>
+        <google-map height="300px" width="100%" [center]="places[currentIndex].mapLocation" [zoom]="zoom"
+            [options]="mapOptions">
+            <map-marker [position]="places[currentIndex].mapLocation"></map-marker>
+        </google-map>
+    </div> -->
+
+    <!-- Gallery -->
+    <div class="image-gallery">
+        <h4>Gallery</h4>
+        <div class="gallery-images">
+            <img *ngFor="let img of places[currentIndex].gallery" [src]="img" alt="Gallery Image" />
+        </div>
+    </div>
+
+    <!-- Music Toggle -->
+    <div class="music-toggle" style="border-bottom: 1px solid #000;">
+        <h4>True Folks Music</h4>
+        <button (click)="toggleMusic()" class="mb-3">
+            🎵 {{ audioPlaying ? 'Pause Ambient Music' : 'Play Ambient Music' }}
+        </button>
+    </div>
+
+    <div class="custom-accordion mt-3">
+        <h4>Journey Through Aryan Valley's Gems </h4>
+        <div class="accordion-item" *ngFor="let place of morePlaces; let i = index">
+
+            <!-- Accordion Header -->
+            <div class="accordion-header" (click)="toggleSection(i)">
+                <div class="header-text">
+                    <h2 class="place-title">{{ place.title }}</h2>
+                    <p class="place-subtitle">{{ place.subtitle }}</p>
+                </div>
+                <span class="toggle-icon">{{ place.open ? '−' : '+' }}</span>
+            </div>
+
+            <!-- Accordion Body -->
+            <div class="accordion-body" *ngIf="place.open">
+                <p class="intro-text">{{ place.intro }}</p>
+
+                <!-- Image Gallery -->
+                <div class="image-gallery">
+                    <img *ngFor="let img of place.images" [src]="img" alt="{{ place.title }} image" />
+                </div>
+
+                <!-- Spot List -->
+                <div class="spot-section">
+                    <h4>Must Visit Spots in {{ place.title }}</h4>
+                    <ul>
+                        <li *ngFor="let spot of place.spots">📍 {{ spot }}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+<div class="container-fluid p-0">
+    <img src="../../assets/map.jfif" alt="" class="img-fluid" style="width: 100%; height: 40vh;" />
+</div>

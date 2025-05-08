@@ -1,0 +1,27 @@
+.camp-header {
+  background: #2c3e50;
+  color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  padding: 15px 0; /* Adjust for smaller screens */
+}
+
+.camp-logo {
+  height: 60px;
+  width: auto;
+}
+
+.camp-name {
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-top: 10px; /* Adjust spacing for better alignment */
+}
+.camp-title {
+  text-align: left;
+}
+
+@media (max-width: 576px) {
+  .camp-name {
+    font-size: 1.2rem; /* Reduce font size for mobile screens */
+  }
+}

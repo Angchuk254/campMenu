@@ -1,0 +1,11 @@
+<div class="menu-container">
+    <div *ngFor="let category of menuData; trackBy: trackByCategory" class="category">
+        <h2>{{ category.category }}</h2>
+        <ul>
+            <li *ngFor="let item of category.items; trackBy: trackByItem">
+                <span>{{ item.name }}</span>
+                <span class="price">₹ {{ item.price }}</span>
+            </li>
+        </ul>
+    </div>
+</div>
